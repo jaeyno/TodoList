@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RealTimeTodo.Web.Services;
 
 namespace RealTimeTodo.Web
 {
@@ -16,6 +17,11 @@ namespace RealTimeTodo.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSpaStaticFiles(configure => {
+                configure.RootPath = "wwwroot";
+            });
+
+            services.AddSingleton<InMemoryToDoRepository, InMemoryToDoRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -25,6 +31,14 @@ namespace RealTimeTodo.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSpaStaticFiles(new StaticFileOptions() {
+
+            });
+
+            app.UseSpa(config => {
+                config.UseProxyToSpaDevelopmentServer("http://localhost:4200");
+            });
 
             app.UseRouting();
 

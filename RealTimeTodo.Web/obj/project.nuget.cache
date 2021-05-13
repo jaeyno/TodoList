@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "uctI3vuaBN4DjQ2PjCLNewonuUKCxE2Bn3lul3OYGhdwMh9uTbccEijykBAIhWd71PGbkTxRhMpDor9AWgyDPQ==",
+  "dgSpecHash": "ttadVAJxCASDX/+eeLZKcX4wM/W1OtOaRxPlurYDOVLuaBiUTFDgP/gChJk0al3+tZ7h/fkee9tinBJ7gyChnQ==",
   "success": true,
   "projectFilePath": "/Users/jaeno/Desktop/TodoList/RealTimeTodo.Web/RealTimeTodo.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/jaeno/.nuget/packages/microsoft.aspnetcore.spaservices.extensions/5.0.6/microsoft.aspnetcore.spaservices.extensions.5.0.6.nupkg.sha512",
+    "/Users/jaeno/.nuget/packages/microsoft.extensions.fileproviders.abstractions/5.0.0/microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
+    "/Users/jaeno/.nuget/packages/microsoft.extensions.fileproviders.physical/5.0.0/microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
+    "/Users/jaeno/.nuget/packages/microsoft.extensions.filesystemglobbing/5.0.0/microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
+    "/Users/jaeno/.nuget/packages/microsoft.extensions.primitives/5.0.0/microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
