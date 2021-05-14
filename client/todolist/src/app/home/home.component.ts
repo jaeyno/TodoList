@@ -1,3 +1,4 @@
+import { TodoService } from './todo.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,10 +10,15 @@ export class HomeComponent implements OnInit {
 
   lists: any[] = [];
 
-  constructor() { }
+  constructor(private toDoService: TodoService) { }
 
   ngOnInit(): void {
     this.demoList();
+    this.createdHubConnection();
+  }
+
+  createdHubConnection() { 
+    this.toDoService.createConnection();
   }
 
   demoList() {
